@@ -1,160 +1,45 @@
-body, #page-my-index {
-    background: #202020;
-    color: #d1d1d1;
+:root {
+    --dm-background: #1F2428;
+    --dm-foreground: #242A2E;
+    --dm-headings: #FAFAFA;
+    --dm-border: #343A3E;
+    --dm-link: #A4AAAE;
+    --dm-hover: #343A3E;
 }
 
-h1, h2, h3, h4, h5 {
-    color: #f8f8f8;
+body, .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link, .main-inner, #region-main, .card, .secondary-navigation .navigation, .moremenu .nav-tabs {
+    background-color: var(--dm-background) !important;
+    color: var(--dm-headings);
+    border-color: var(--dm-border);
 }
 
-a {
-    color: #8ba7e2;
+a, .courseindex .courseindex-item .courseindex-link, .courseindex .courseindex-item .courseindex-chevron {
+    color: var(--dm-link) !important;
 }
 
-/* Nav */
-.navbar {
-    background-color: #161616 !important;
-    border-bottom-color: #181818;
+.bg-white {
+    background-color: var(--dm-foreground) !important;
 }
 
-.navbar-light .navbar-nottingham .btn .fa-bars {
-    color: #f8f8f8;
+.list-group-item, .drawer, .description .course-description-item, .dropdown-menu {
+    background-color: var(--dm-foreground) !important;
+    border-color: var(--dm-border);
 }
 
-.usermenu .usertext {
-    color: #f788c5;
+.activity-item:not(.activityinline), .dropdown-divider {
+    border-color: var(--dm-border);
 }
 
-/* Carousel */
-.theme-slider .carousel .carousel-inner .carousel-item .carousel-overlay-content .content-wrap {
-    background-color: #161616 !important;
-    color: #f8f8f8 !important;
+.moremenu .nav-link.active:focus, .moremenu .nav-link.active:hover, .moremenu .nav-link:hover, .moremenu .nav-link:focus {
+    background-color: var(--dm-hover);
 }
 
-.theme-slider .carousel .carousel-inner .carousel-item .carousel-overlay-content .content-wrap h1,
-.theme-slider .carousel .carousel-inner .carousel-item .carousel-overlay-content .content-wrap p {
-    color: #f8f8f8 !important;
+::-webkit-scrollbar-track {
+    background: var(--dm-background) !important;
 }
 
-/* Cards */
-.card,
-.uon-content {
-    background-color: #161616;
-    border-color: #181818;
-}
-
-#page-my-index #page-header div[class*="col-"]:first-of-type .card {
-    background-color: transparent;
-}
-
-.block .card-body .card-title {
-    color: #f8f8f8;
-}
-
-.block.block_myoverview .card-body .card-title {
-    color: #ffffff;
-}
-
-/* Calendar */
-.block.block_calendar_month .minicalendar .arrow_link {
-    color: #f788c5;
-}
-
-.block .minicalendar td a {
-    color: #8ba7e2;
-}
-
-.calendar_event_course {
-    background-color: #b32d2d;
-}
-
-.block.block_myoverview .block-cards .paged-content-page-container .course-listitem .coursename,
-.block-cards a.coursename,
-.block .card-text a.coursename {
-    color: #9eb3e0
-}
-
-.block.block_myoverview .block-cards .paged-content-page-container .dashboard-card .coursename,
-.block.block_myoverview .block-cards .paged-content-page-container .course-summaryitem .coursename {
-    color: #0a76c9;
-}
-
-.btn-outline-secondary {
-    color: #f788c5;
-    border-color: rgba(255, 255, 255, 0.1);
-}
-
-.list-group-item {
-    border-color: rgba(255, 255, 255, 0.1);
-}
-
-.pagelayout-course #region-main .card .page-heading, .pagelayout-course #region-main .uon-content .page-heading {
-    background-color: #161616;
-}
-
-.pagelayout-course #region-main .card .course-content .ctopics .section#section-0,
-.pagelayout-course #region-main .uon-content .course-content .ctopics .section#section-0 {
-    background-color: #161616;
-}
-
-.pagelayout-course #region-main .card .course-content .section .content,
-.pagelayout-course #region-main .uon-content .course-content .section .content {
-    background-color: #161616;
-}
-
-.course-content ul.ctopics li.section .content .toggle {
-    background-color: #0a3568 !important;
-}
-
-/* Foldout background*/
-.pagelayout-course #region-main .uon-content .course-content .ctopics .section .sectionbody,
-.pagelayout-course #region-main .uon-content .course-content .section .content h3.sectionname {
-    background-color: #161616;
-}
-
-/* Foldout text */
-.course-content ul.ctopics li.section .content .toggle .the_toggle,
-.pagelayout-course #region-main .uon-content .course-content .section .content h3.sectionname {
-    color: #ffffff !important;
-}
-
-.pagelayout-course .course-content .section h3.sectionname a {
-    color: #ffffff;
-}
-
-.pagelayout-course #region-main .uon-content .course-content .ctopics .section h3.sectionname {
-    background-color: transparent;
-}
-
-.page-link {
-    color: #f8f8f8;
-    background-color: #161616;
-    border-color: rgba(255, 255, 255, 0.1);
-}
-
-.page-item.disabled .page-link {
-    color: #8d8d8d;
-    background-color: #161616;
-    border-color: rgba(255, 255, 255, 0.1);
-}
-
-.border-bottom {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-}
-
-/* Footer */
-.copyright {
-    background-color: #202020;
-}
-
-/* Table */
-.generaltable {
-    color: #d1d1d1;
-}
-
-.path-mod-assign td.submissionstatussubmitted,
-.path-mod-assign td.earlysubmission,
-.path-mod-assign td.submissiongraded {
-    color: #ffffff;
-    background-color: #469b47;
+::-webkit-scrollbar-thumb {
+    background: var(--dm-hover) !important;
+    border: none !important;
+    border-radius: 0px !important;
 }

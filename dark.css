@@ -5,23 +5,38 @@
     --dm-border: #343A3E;
     --dm-link: #A4AAAE;
     --dm-hover: #343A3E;
+    --dm-green: #468137;
 }
 
-body, .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link, .main-inner, #region-main, .card, .secondary-navigation .navigation, .moremenu .nav-tabs {
+body, .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link, .main-inner, #region-main, .card,
+.secondary-navigation .navigation, .moremenu .nav-tabs,
+.path-grade-report-user .user-report-container, .grade-report-user .user-report-container,
+.path-grade-report-user .user-grade td, .grade-report-user .user-grade td,
+.path-grade-report-user .user-grade thead th, .grade-report-user .user-grade thead th {
     background-color: var(--dm-background) !important;
-    color: var(--dm-headings);
-    border-color: var(--dm-border);
+    color: var(--dm-headings) !important;
+    border-color: var(--dm-border) !important;
 }
 
-a, .courseindex .courseindex-item .courseindex-link, .courseindex .courseindex-item .courseindex-chevron {
+.btn {
+    background-color: var(--dm-background) !important;
+    color: var(--dm-headings) !important;
+}
+
+a, .courseindex .courseindex-item .courseindex-link, .courseindex .courseindex-item .courseindex-chevron,
+.path-grade-report-user .user-grade td.category a.toggle-category i, .grade-report-user .user-grade td.category a.toggle-category i {
     color: var(--dm-link) !important;
+}
+
+.generaltable, .generaltable tbody tr:hover {
+    color: var(--dm-headings) !important;
 }
 
 .bg-white {
     background-color: var(--dm-foreground) !important;
 }
 
-.list-group-item, .drawer, .description .course-description-item, .dropdown-menu {
+.list-group-item, .drawer, .description .course-description-item, .dropdown-menu, .path-mod .activity-header:not(:empty) {
     background-color: var(--dm-foreground) !important;
     border-color: var(--dm-border);
 }
@@ -32,6 +47,17 @@ a, .courseindex .courseindex-item .courseindex-link, .courseindex .courseindex-i
 
 .moremenu .nav-link.active:focus, .moremenu .nav-link.active:hover, .moremenu .nav-link:hover, .moremenu .nav-link:focus {
     background-color: var(--dm-hover);
+}
+
+.path-mod-assign td.submissionstatussubmitted, .path-mod-assign div.submissionstatussubmitted, .path-mod-assign a:link.submissionstatussubmitted, 
+.path-mod-assign td.submissiongraded, .path-mod-assign div.submissiongraded, 
+.path-mod-assign td.earlysubmission, .path-mod-assign div.earlysubmission {
+    color: var(--dm-headings);
+    background-color: var(--dm-green);
+}
+
+.navbar.fixed-top .navbar-brand .logo {
+    filter: invert() contrast(200%);
 }
 
 ::-webkit-scrollbar-track {
